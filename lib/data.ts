@@ -25,7 +25,9 @@ export const site = {
 
   // >>> A REMPLACER par le vrai domaine a la mise en ligne. Une seule ligne :
   //     metadonnees, canonique, sitemap, robots et donnees structurees suivent.
-  url: "https://odinner.vercel.app",
+  //     En attendant, c'est l'URL de production Vercel : la canonique et le
+  //     sitemap pointent donc vers un hote qui existe reellement.
+  url: "https://odinner-site.vercel.app",
 
   phoneDisplay: "06 25 86 93 17",
   phoneHref: "tel:+33625869317",

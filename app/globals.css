@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-bone antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    @apply bg-brand text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-ink;
+  }
+
+  .on-paper :focus-visible {
+    @apply ring-offset-paper;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[76rem] px-5 sm:px-8;
+  }
+
+  /* Sur-titre : petite capitale espacee, barre rouge devant */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.6875rem] font-semibold uppercase tracking-[0.24em];
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-7 bg-brand;
+  }
+
+  /* Titres : grotesque lourd, tres serre, casse naturelle (pas de capitales) */
+  .h1 {
+    @apply font-display text-[clamp(2.05rem,5.2vw,4rem)] font-extrabold leading-[0.95] tracking-tightest;
+  }
+
+  .h2 {
+    @apply font-display text-[clamp(2rem,4.4vw,3.25rem)] font-extrabold leading-[0.95] tracking-tightest;
+  }
+
+  .h3 {
+    @apply font-display text-xl font-bold leading-tight tracking-tight;
+  }
+
+  .lede {
+    @apply text-[1.0625rem] leading-relaxed sm:text-lg;
+  }
+
+  /* Boutons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-[0.9375rem] font-semibold transition duration-200 active:scale-[0.98];
+  }
+
+  .btn-brand {
+    @apply btn bg-brand text-white hover:bg-brand-bright;
+  }
+
+  .btn-light {
+    @apply btn bg-bone text-ink hover:bg-white;
+  }
+
+  .btn-outline-dark {
+    @apply btn border border-char-line bg-transparent text-bone hover:border-bone/60 hover:bg-white/5;
+  }
+
+  .btn-outline-light {
+    @apply btn border border-paper-line bg-transparent text-ink hover:border-ink/40 hover:bg-ink/5;
+  }
+
+  /* Pastille de statut ouvert / ferme */
+  .status-dot {
+    @apply h-1.5 w-1.5 shrink-0 rounded-full;
+  }
+
+  /* Ligne de prix facon carte imprimee : pointilles entre nom et prix */
+  .leader {
+    @apply mx-3 hidden min-w-6 flex-1 self-end border-b border-dotted border-current opacity-25 sm:block;
+    margin-bottom: 0.35rem;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Masque de degrade pour les rails a defilement horizontal */
+  .fade-x {
+    mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Grain discret, applique sur les grandes surfaces sombres */
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}

@@ -1,4 +1,4 @@
-# O'dinner — site vitrine
+# O'dinner, site vitrine
 
 Restaurant **O'dinner**, 51 Rue Hervé de Mareuil, 85320 Mareuil-sur-Lay-Dissais
 (Vendée). Next.js 14 (App Router), Tailwind CSS, aucune dépendance runtime
@@ -19,8 +19,12 @@ npm run build
 - **Statut « Ouvert / Fermé » en direct**, calculé à l'heure de Paris, avec
   l'heure de fermeture ou de prochaine ouverture, et le jour du jour mis en
   avant dans le tableau des horaires.
-- **Avis Google réels** (4,9/5 · 76 avis), repris sans modification.
-- **Barre d'actions fixe sur mobile** : appeler, WhatsApp, itinéraire.
+- **Animations au défilement** (Framer Motion) : entrée en cascade du hero,
+  apparitions des sections, halos rouges qui dérivent en fond avec une légère
+  parallaxe, filet de progression en haut de page. Tout se désactive si le
+  visiteur a réduit les animations dans son système.
+- **Avis Google réels**, repris sans modification. Pas de note chiffrée : elle bouge à chaque nouvel avis, la fiche Google fait foi.
+- **Barre d'actions fixe sur mobile** : appeler et itinéraire.
 
 ## Où modifier le contenu
 
@@ -28,13 +32,13 @@ Tout est dans **`lib/data.ts`** :
 
 | À changer | Clé |
 | --- | --- |
-| Nom de domaine | `site.url` — une seule ligne : SEO, canonique, sitemap, robots, JSON-LD et `llms.txt` suivent. Actuellement `https://odinner-site.vercel.app` |
+| Nom de domaine | `site.url`, une seule ligne : SEO, canonique, sitemap, robots, JSON-LD et `llms.txt` suivent. Actuellement `https://odinner-site.vercel.app` |
 | Téléphone, adresse, GPS | `site.phoneDisplay`, `site.address`, `site.geo` |
-| Horaires | `openingHours` — plusieurs créneaux par jour, `slots: []` = fermé |
+| Horaires | `openingHours`, plusieurs créneaux par jour, `slots: []` = fermé |
 | Carte et prix | `menu` (+ `viandes`, `sauces`, `supplements`, `extras`) |
-| Avis et note | `reviews`, `rating` |
+| Avis clients | `reviews` |
 | Communes ciblées | `site.areaServed` |
-| FAQ | `faq` — alimente aussi le bloc FAQPage de Google |
+| FAQ | `faq`, alimente aussi le bloc FAQPage de Google |
 
 Photos dans `public/photos/` : `logo.png` (logo détouré de la fiche Google),
 `patisseries-orientales.jpg`, et les quatre panneaux `carte-*.jpg`.
@@ -44,7 +48,7 @@ Photos dans `public/photos/` : `logo.png` (logo détouré de la fiche Google),
 - Title < 60 caractères, description < 160, canonique, Open Graph, Twitter
   Card, balises `geo.*` / ICBM.
 - JSON-LD `Restaurant` : adresse, GPS, horaires **par créneau**, zone
-  desservie, et `hasMenu` complet — chaque article avec son prix.
+  desservie, et `hasMenu` complet : chaque article avec son prix.
 - JSON-LD `FAQPage` sur les 8 questions de la page.
 - `robots.txt`, `sitemap.xml`, `manifest.webmanifest`, favicon, icône Apple et
   image Open Graph générés par le framework.

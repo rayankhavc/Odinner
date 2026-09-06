@@ -5,7 +5,7 @@ import { site } from "@/lib/data";
 
 /**
  * Lien téléphone : sur mobile il déclenche l'appel, sur ordinateur `tel:`
- * n'ouvre généralement rien — on copie alors le numéro et on le confirme.
+ * n'ouvre généralement rien : on copie alors le numéro et on le confirme.
  */
 export default function CallButton({
   className,

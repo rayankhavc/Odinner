@@ -6,6 +6,7 @@ import { PhoneIcon } from "@/components/icons";
 import CallButton from "@/components/CallButton";
 import Wordmark from "@/components/Wordmark";
 import StatusPill from "@/components/StatusPill";
+import SmoothLink from "@/components/SmoothLink";
 
 const nav = [
   { href: "#carte", label: "La carte" },
@@ -35,22 +36,22 @@ export default function Header() {
       }`}
     >
       <div className="wrap flex h-[4.5rem] items-center justify-between gap-6">
-        <a href="#haut" aria-label={`${site.name}, haut de page`}>
+        <SmoothLink href="#haut" ariaLabel={`${site.name}, haut de page`}>
           <Wordmark size="sm" />
-        </a>
+        </SmoothLink>
 
         <nav
           className="hidden items-center gap-8 lg:flex"
           aria-label="Navigation principale"
         >
           {nav.map((l) => (
-            <a
+            <SmoothLink
               key={l.href}
               href={l.href}
               className="text-sm text-bone/65 transition-colors hover:text-bone"
             >
               {l.label}
-            </a>
+            </SmoothLink>
           ))}
         </nav>
 

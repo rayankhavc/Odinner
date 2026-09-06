@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/lib/data";
-import { PhoneIcon, RouteIcon, WhatsappIcon } from "@/components/icons";
+import { PhoneIcon, RouteIcon } from "@/components/icons";
 import CallButton from "@/components/CallButton";
 
 /**
- * Barre d'actions fixe en bas d'écran sur mobile : appeler, WhatsApp,
- * itinéraire. Elle n'apparaît qu'une fois le hero passé, pour ne pas
- * recouvrir les boutons principaux dès l'arrivée.
+ * Barre d'actions fixe en bas d'ecran sur mobile : appeler et itineraire.
+ * Elle n'apparait qu'une fois le hero passe, pour ne pas recouvrir les
+ * boutons principaux des l'arrivee.
  */
 export default function MobileBar() {
   const [shown, setShown] = useState(false);
@@ -33,19 +33,10 @@ export default function MobileBar() {
           Appeler
         </CallButton>
         <a
-          href={site.whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-outline-dark !px-4 !py-3"
-          aria-label="Écrire à O'dinner sur WhatsApp"
-        >
-          <WhatsappIcon className="h-5 w-5" />
-        </a>
-        <a
           href={site.directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-outline-dark !px-4 !py-3"
+          className="btn-outline-dark !px-5 !py-3"
           aria-label="Itinéraire vers O'dinner"
         >
           <RouteIcon className="h-5 w-5" />

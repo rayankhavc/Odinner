@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import { site, openingHoursSchema, faq, menu } from "@/lib/data";
 import Analytics from "@/components/Analytics";
+import ScrollProgress from "@/components/motion/ScrollProgress";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -171,6 +172,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
+        <ScrollProgress />
         {children}
         <Analytics />
       </body>

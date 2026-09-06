@@ -32,10 +32,6 @@ export const site = {
   phoneDisplay: "06 25 86 93 17",
   phoneHref: "tel:+33625869317",
   phoneE164: "+33625869317",
-  // Le restaurant a annonce sur sa page Facebook (14 aout 2026) que la ligne
-  // fixe etait hors service et qu'on pouvait le joindre sur WhatsApp, au meme
-  // numero. Les commandes, elles, se passent par appel.
-  whatsappUrl: "https://wa.me/33625869317",
 
   address: {
     street: "51 Rue Hervé de Mareuil",
@@ -125,7 +121,7 @@ export const boards: Board[] = [
 ];
 
 /* ============================================================
-   LA CARTE — relevee sur les panneaux du restaurant
+   LA CARTE, relevee sur les panneaux du restaurant
    ============================================================ */
 
 export type MenuItem = {
@@ -485,6 +481,10 @@ export const extras = [
 
 /* ============================================================
    AVIS GOOGLE (repris tels quels, non modifies)
+   ------------------------------------------------------------
+   Volontairement sans note chiffree : elle bouge a chaque nouvel
+   avis, et un site qui affiche 4,9 alors que la fiche dit 4,7 se
+   decredibilise tout seul. La fiche Google fait foi.
    ============================================================ */
 
 export type Review = {
@@ -494,8 +494,6 @@ export type Review = {
   date: string; // ISO
   dateLabel: string;
 };
-
-export const rating = { value: "4,9", count: 76 };
 
 export const reviews: Review[] = [
   {
@@ -518,13 +516,6 @@ export const reviews: Review[] = [
     date: "2025-08-24",
     dateLabel: "Août 2025",
     text: "Le double burger est garni comme il faut et le kebab est bon ! Je ne pensais pas trouver ça à 10 minutes de chez moi. Je reviendrai !",
-  },
-  {
-    author: "Mathis A.",
-    rating: 5,
-    date: "2025-08-29",
-    dateLabel: "Août 2025",
-    text: "Endroit chaleureux, toujours le sourire et bien servi, je recommande.",
   },
 ];
 
@@ -594,7 +585,7 @@ export const openingHours: DayHours[] = [
 ];
 
 export const formatHour = (v: string) => v.replace(":", "h");
-export const formatSlot = (s: Slot) => `${formatHour(s.open)} – ${formatHour(s.close)}`;
+export const formatSlot = (s: Slot) => `${formatHour(s.open)} à ${formatHour(s.close)}`;
 export const formatDay = (d: DayHours) =>
   d.slots.length === 0 ? "Fermé" : d.slots.map(formatSlot).join(" · ");
 
@@ -621,41 +612,41 @@ export const faq: FaqItem[] = [
   {
     question: "Où manger un kebab à Mareuil-sur-Lay-Dissais ?",
     answer:
-      "Chez O'dinner, au 51 Rue Hervé de Mareuil à Mareuil-sur-Lay-Dissais (85320). Kebabs, burgers, tacos, paninis, assiettes et bowls y sont préparés à la commande, sur place ou à emporter, à une dizaine de minutes de Luçon.",
+      "Chez nous, au 51 rue Hervé de Mareuil, en plein bourg. On fait les kebabs, les burgers, les tacos, les paninis, les assiettes et les bowls, à manger sur place ou à emporter. Luçon est à une dizaine de minutes.",
   },
   {
     question: "Quels sont les horaires d'O'dinner ?",
     answer:
-      "Ouvert 7j/7. Du mardi au jeudi de 11h00 à 14h30 et de 18h00 à 22h00, le vendredi de 18h00 à 23h00, le samedi de 11h00 à 14h30 et de 18h00 à 23h00, le dimanche de 12h00 à 14h30 et de 17h00 à 22h00, et le lundi de 18h30 à 22h00.",
+      "On est ouvert tous les jours. Du mardi au jeudi de 11h00 à 14h30 et de 18h00 à 22h00. Le vendredi de 18h00 à 23h00. Le samedi de 11h00 à 14h30 et de 18h00 à 23h00. Le dimanche de 12h00 à 14h30 et de 17h00 à 22h00. Le lundi de 18h30 à 22h00.",
   },
   {
-    question: "O'dinner est-il ouvert le midi ?",
+    question: "Êtes-vous ouverts le midi ?",
     answer:
-      "Oui, du mardi au jeudi et le samedi de 11h00 à 14h30, et le dimanche de 12h00 à 14h30. Le lundi et le vendredi, le restaurant n'ouvre que le soir.",
+      "Oui, du mardi au jeudi et le samedi de 11h00 à 14h30, et le dimanche à partir de midi. Le lundi et le vendredi, on n'ouvre que le soir.",
   },
   {
-    question: "Comment commander chez O'dinner ?",
+    question: "Comment commander ?",
     answer:
-      "Les commandes se prennent par téléphone au 06 25 86 93 17, puis vous passez récupérer sur place. Vous pouvez aussi manger sur place. Le restaurant est également joignable sur WhatsApp au même numéro.",
+      "Un coup de fil au 06 25 86 93 17, on prépare, vous passez récupérer. Vous pouvez aussi vous installer en salle et commander sur place.",
   },
   {
-    question: "La viande est-elle halal chez O'dinner ?",
+    question: "La viande est-elle halal ?",
     answer:
-      "Oui, les viandes servies chez O'dinner sont halal : steak 100 % bœuf, kebab, merguez, escalope, poulet curry, cordon bleu, tenders, nuggets et kefta.",
+      "Oui, toutes nos viandes sont halal : steak 100 % bœuf, kebab, merguez, escalope, poulet curry, cordon bleu, tenders, nuggets et kefta.",
   },
   {
-    question: "Y a-t-il des plats végétariens ?",
+    question: "Avez-vous des plats végétariens ?",
     answer:
-      "Oui. Les falafels sont proposés en sandwich, en tacos, en assiette et en bowl, et la salade Végane (falafel, poivron, chou rouge) est entièrement végétale. Côté fromages : paninis 3 Fromages et Chèvre Miel, mozza sticks, onion rings et camemberts panés.",
+      "Oui. Les falafels se prennent en sandwich, en tacos, en assiette ou en bowl, et la salade Végane est entièrement végétale. Côté fromage, il y a les paninis 3 fromages et chèvre miel, les mozza sticks, les onion rings et les camemberts panés.",
   },
   {
-    question: "Combien coûte un repas chez O'dinner ?",
+    question: "Combien coûte un repas ?",
     answer:
-      "Un sandwich classique servi avec frites démarre à 8 €, un tacos 1 viande à 9 €, un burger à partir de 5 €. Le Menu Duo est à 15 € et le Menu Enfant à 7,50 €.",
+      "Un sandwich servi avec des frites démarre à 8 €, un tacos une viande à 9 €, un burger à partir de 5 €. Le menu duo est à 15 € et le menu enfant à 7,50 €.",
   },
   {
-    question: "Y a-t-il un parking près d'O'dinner ?",
+    question: "Peut-on se garer facilement ?",
     answer:
-      "Oui, stationnement gratuit dans la rue Hervé de Mareuil, avec une place accessible en fauteuil roulant devant le restaurant.",
+      "Oui, on se gare gratuitement dans la rue Hervé de Mareuil, et il y a une place accessible en fauteuil roulant devant la boutique.",
   },
 ];

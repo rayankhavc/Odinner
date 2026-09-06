@@ -6,7 +6,7 @@ import { PinIcon } from "@/components/icons";
 
 /**
  * La carte Google n'est chargée qu'après un clic : tant qu'on ne clique pas,
- * aucun cookie tiers n'est déposé — donc pas de bandeau cookies à afficher.
+ * aucun cookie tiers n'est déposé, donc pas de bandeau cookies à afficher.
  */
 export default function MapEmbed() {
   const [show, setShow] = useState(false);

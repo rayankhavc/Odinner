@@ -53,12 +53,12 @@ export default function Boards() {
           <div className="max-w-xl">
             <p className="eyebrow text-brand">Les panneaux</p>
             <h2 className="h2 mt-5 text-balance text-bone">
-              La carte telle qu&apos;elle est affichée.
+              La carte, comme au comptoir.
             </h2>
           </div>
           <p className="max-w-sm text-[0.9375rem] text-bone/50">
-            Les quatre panneaux du restaurant, en pleine résolution. Cliquez
-            pour agrandir et lire chaque prix.
+            Nos quatre panneaux, en grand. Cliquez sur l&apos;un d&apos;eux pour
+            le lire tranquillement.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site, hoursSummary, hoursNote } from "@/lib/data";
-import { FacebookIcon, PhoneIcon, WhatsappIcon } from "@/components/icons";
+import { FacebookIcon, PhoneIcon } from "@/components/icons";
 import CallButton from "@/components/CallButton";
 import Wordmark from "@/components/Wordmark";
 
@@ -12,23 +12,14 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Wordmark size="lg" />
             <p className="mt-4 max-w-xs text-[0.9375rem] leading-relaxed text-bone/50">
-              Kebab, burgers, tacos, assiettes et pâtisseries orientales à{" "}
-              {site.city} ({site.zip}), en Vendée.
+              Kebabs, burgers, tacos, assiettes et pâtisseries orientales à{" "}
+              {site.city} ({site.zip}), en Vendée. À emporter ou sur place.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6">
               <CallButton className="btn-brand">
                 <PhoneIcon className="h-[1.125rem] w-[1.125rem]" />
                 {site.phoneDisplay}
               </CallButton>
-              <a
-                href={site.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline-dark"
-              >
-                <WhatsappIcon className="h-[1.125rem] w-[1.125rem]" />
-                WhatsApp
-              </a>
             </div>
           </div>
 

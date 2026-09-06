@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { rating } from "@/lib/data";
 
 export const runtime = "edge";
 export const alt =
@@ -84,9 +83,7 @@ export default function OpengraphImage() {
           <span style={{ display: "flex", color: "#3A3A3E" }}>/</span>
           <span style={{ display: "flex" }}>Ouvert 7j/7</span>
           <span style={{ display: "flex", color: "#3A3A3E" }}>/</span>
-          <span style={{ display: "flex" }}>
-            {rating.value}/5 · {rating.count} avis Google
-          </span>
+          <span style={{ display: "flex" }}>Sur place ou à emporter</span>
         </div>
       </div>
     ),

@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 const blocks = [
   {
     title: "Données collectées",
-    body: `Ce site est un site vitrine. Il ne propose ni formulaire de contact, ni compte client, ni paiement en ligne : aucune donnée personnelle n'est demandée ni enregistrée. Lorsque vous appelez le ${site.phoneDisplay} ou écrivez sur WhatsApp, l'échange se fait hors du site.`,
+    body: `Ce site est un site vitrine. Il ne propose ni formulaire de contact, ni compte client, ni paiement en ligne : aucune donnée personnelle n'est demandée ni enregistrée. Lorsque vous appelez le ${site.phoneDisplay}, l'échange se fait par téléphone, hors du site.`,
   },
   {
     title: "Cookies",
-    body: "Le site ne dépose aucun cookie publicitaire ni de mesure d'audience. La carte Google n'est chargée que si vous cliquez sur « Afficher la carte » : ce n'est qu'à ce moment, et par votre action, que Google peut déposer ses propres cookies. Tant que vous ne cliquez pas, aucun cookie tiers n'est déposé — c'est pourquoi ce site n'affiche pas de bandeau cookies.",
+    body: "Le site ne dépose aucun cookie publicitaire ni de mesure d'audience. La carte Google n'est chargée que si vous cliquez sur « Afficher la carte » : ce n'est qu'à ce moment, et par votre action, que Google peut déposer ses propres cookies. Tant que vous ne cliquez pas, aucun cookie tiers n'est déposé. C'est pourquoi ce site n'affiche pas de bandeau cookies.",
   },
   {
     title: "Liens sortants",
-    body: "Les boutons WhatsApp, Facebook, Google Maps et « laisser un avis » ouvrent des services tiers, qui appliquent alors leurs propres règles de confidentialité.",
+    body: "Les boutons Facebook, Google Maps et « laisser un avis » ouvrent des services tiers, qui appliquent alors leurs propres règles de confidentialité.",
   },
   {
     title: "Hébergement et journaux techniques",

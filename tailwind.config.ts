@@ -48,11 +48,28 @@ const config: Config = {
           "0%,100%": { opacity: "1" },
           "50%": { opacity: "0.35" },
         },
+        // Derive tres lente des halos de fond : uniquement des transforms,
+        // pour rester sur le compositeur et ne rien repeindre.
+        driftA: {
+          "0%,100%": { transform: "translate3d(0,0,0) scale(1)" },
+          "50%": { transform: "translate3d(-4%,3%,0) scale(1.08)" },
+        },
+        driftB: {
+          "0%,100%": { transform: "translate3d(0,0,0) scale(1.06)" },
+          "50%": { transform: "translate3d(5%,-3%,0) scale(1)" },
+        },
+        nudge: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(5px)" },
+        },
       },
       animation: {
         marquee: "marquee 32s linear infinite",
         rise: "rise 0.6s cubic-bezier(0.16,1,0.3,1) both",
         pulseDot: "pulseDot 2s ease-in-out infinite",
+        driftA: "driftA 26s ease-in-out infinite",
+        driftB: "driftB 32s ease-in-out infinite",
+        nudge: "nudge 2.4s ease-in-out infinite",
       },
     },
   },

@@ -23,7 +23,7 @@ const blocks = [
         <br />
         SIRET : {site.siret}
         <br />
-        Code APE : {site.ape} — Restauration de type rapide
+        Code APE : {site.ape}, restauration de type rapide
         <br />
         Responsable de la publication : {site.manager}, gérant
       </>

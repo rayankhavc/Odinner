@@ -75,6 +75,12 @@ export default function Footer() {
             <Link href="/confidentialite" className="transition-colors hover:text-bone/70">
               Confidentialité
             </Link>
+            {/* Retirer son consentement doit être aussi simple que de le
+                donner : ce lien rouvre le bandeau quand la mesure d'audience
+                est branchée (voir components/Consent.tsx). */}
+            <Link href="/confidentialite#cookies" className="transition-colors hover:text-bone/70">
+              Cookies
+            </Link>
           </nav>
         </div>
 

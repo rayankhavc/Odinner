@@ -39,9 +39,9 @@ export default function Hero() {
             <p
               className="lede mt-7 max-w-xl text-pretty text-bone/65 animate-rise" style={{ animationDelay: "0.12s" }}
             >
-              Notre pain, on le fait ici. La viande est hachée du jour, la sauce
-              fromagère préparée maison. Rien n&apos;attend sous une lampe : on
-              lance votre plat quand vous commandez.
+              Pain maison, viande hachée fraîche 100&nbsp;% bœuf, sauce
+              fromagère maison. On prépare votre plat quand vous commandez, à
+              manger sur place ou à emporter.
             </p>
 
             <div className="mt-8 animate-rise" style={{ animationDelay: "0.18s" }}>
@@ -87,7 +87,7 @@ export default function Hero() {
             <div className="relative aspect-square">
               <Image
                 src={photos.logo}
-                alt="Logo O'dinner, pizza et fast food"
+                alt="Logo O'dinner"
                 fill
                 priority
                 sizes="(max-width: 1024px) 70vw, 34vw"

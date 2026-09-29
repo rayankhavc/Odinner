@@ -15,6 +15,10 @@ const GA_ACTIF = Boolean(process.env.NEXT_PUBLIC_GA_ID);
 
 const blocks: { id?: string; title: string; body: string }[] = [
   {
+    title: "Responsable du traitement",
+    body: `${site.legalName}, ${site.legalForm} au capital de ${site.capital}, ${site.rcs}, dont le siège est situé ${site.address.full}, représentée par ${site.manager}, gérant. Téléphone : ${site.phoneDisplay}.`,
+  },
+  {
     title: "Données collectées",
     body: `Ce site est un site vitrine. Il ne propose ni formulaire de contact, ni compte client, ni paiement en ligne : aucune donnée personnelle n'est demandée ni enregistrée. Lorsque vous appelez le ${site.phoneDisplay}, l'échange se fait par téléphone, hors du site.`,
   },
@@ -31,16 +35,20 @@ const blocks: { id?: string; title: string; body: string }[] = [
       : "Le site ne dépose aucun cookie publicitaire ni de mesure d'audience. La carte Google n'est chargée que si vous cliquez sur « Afficher la carte » : ce n'est qu'à ce moment, et par votre action, que Google peut déposer ses propres cookies. Tant que vous ne cliquez pas, aucun cookie tiers n'est déposé. C'est pourquoi ce site n'affiche pas de bandeau cookies.",
   },
   {
+    title: "Avis clients",
+    body: "Les avis affichés sur la page d'accueil ont été publiés publiquement par leurs auteurs sur notre fiche Google. Seuls le prénom et l'initiale du nom, tels qu'ils apparaissent sur Google, sont repris. Si vous êtes l'auteur d'un de ces avis et souhaitez qu'il soit retiré du site, il suffit de nous le demander : nous le retirons sans délai.",
+  },
+  {
     title: "Liens sortants",
     body: "Les boutons Facebook, Google Maps et « laisser un avis » ouvrent des services tiers, qui appliquent alors leurs propres règles de confidentialité.",
   },
   {
     title: "Hébergement et journaux techniques",
-    body: "L'hébergeur (Vercel) peut conserver des journaux techniques (adresse IP, type de navigateur) à des fins de sécurité et de bon fonctionnement, conformément à sa propre politique.",
+    body: "Le site est hébergé par Vercel Inc., société établie aux États-Unis. Pour la sécurité et le bon fonctionnement du service, Vercel conserve des journaux techniques (adresse IP, type de navigateur, pages demandées) pendant une durée limitée. Ce transfert hors de l'Union européenne est encadré par le Data Privacy Framework UE-États-Unis, auquel Vercel est certifié. Les polices de caractères sont servies par notre propre site : aucune requête n'est envoyée à Google Fonts.",
   },
   {
     title: "Vos droits",
-    body: `Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, contactez le restaurant au ${site.phoneDisplay} ou à l'adresse : ${site.address.full}.`,
+    body: `Conformément au RGPD et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation du traitement de vos données. Pour les exercer, contactez-nous au ${site.phoneDisplay} ou par courrier à l'adresse : ${site.address.full}. Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (cnil.fr).`,
   },
 ];
 

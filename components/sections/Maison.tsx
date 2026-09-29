@@ -11,16 +11,16 @@ const signature = menu
 
 const proofs = [
   {
-    title: "Le pain, on le fait",
-    text: "Buns et pains sortent de notre four. C'est ce que les clients remarquent en premier.",
+    title: "Le pain maison",
+    text: "Burgers et sandwichs sont servis dans notre pain maison, ou en tortilla si vous préférez.",
   },
   {
-    title: "La viande est hachée du jour",
-    text: "100 % bœuf pour les burgers, grillée au moment où vous commandez.",
+    title: "La viande hachée fraîche",
+    text: "100 % bœuf dans tous nos burgers, du P'tit Cheese au Double Farmer.",
   },
   {
-    title: "La sauce fromagère aussi",
-    text: "Celle des tacos et des bowls est préparée ici, pas sortie d'un bidon.",
+    title: "La sauce fromagère maison",
+    text: "C'est elle qui fait nos tacos. Vous la retrouvez aussi dans les bowls.",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function Maison() {
               <div className="relative aspect-[4/5] sm:aspect-[16/11] lg:h-full lg:min-h-[26rem]">
                 <Image
                   src={photos.patisseries}
-                  alt="Vitrine réfrigérée de pâtisseries orientales chez O'dinner : baklava, cornes de gazelle et makrouts"
+                  alt="Vitrine réfrigérée de pâtisseries orientales chez O'dinner"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover"
@@ -101,8 +101,8 @@ export default function Maison() {
                   La vitrine à pâtisseries
                 </h3>
                 <p className="mt-3 max-w-sm text-[0.9375rem] leading-relaxed text-bone/70">
-                  Baklava, cornes de gazelle, makrouts. Ça change au fil des
-                  jours, et ça se prend à la pièce dès 2 €.
+                  Des pâtisseries orientales pour finir le repas, à la pièce
+                  pour 2 €.
                 </p>
               </div>
             </div>

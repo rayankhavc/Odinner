@@ -18,7 +18,7 @@ import Consent from "@/components/Consent";
  * Ce composant s'occupe des deux conséquences plutôt que de les laisser à
  * faire : le mode consentement de Google est posé à « refusé » AVANT le
  * chargement de la balise, et le bandeau apparaît. L'ordre des deux premiers
- * scripts est ce qui fait la conformité — sans le premier, gtag.js écrit son
+ * scripts est ce qui fait la conformité : sans le premier, gtag.js écrit son
  * cookie avant que quiconque ait rien demandé.
  *
  * Retirer la variable défait l'ensemble : aucun traceur, aucun bandeau.

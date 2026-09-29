@@ -15,17 +15,19 @@ const blocks = [
     title: "Éditeur du site",
     body: (
       <>
-        {site.legalName}
+        {site.legalName}, {site.legalForm} au capital de {site.capital}
         <br />
-        {site.address.full}
+        Siège social : {site.address.full}
+        <br />
+        {site.rcs}
+        <br />
+        SIRET : {site.siret} · Code APE : {site.ape}
+        <br />
+        TVA intracommunautaire : {site.vat}
         <br />
         Téléphone : {site.phoneDisplay}
         <br />
-        SIRET : {site.siret}
-        <br />
-        Code APE : {site.ape}, restauration de type rapide
-        <br />
-        Responsable de la publication : {site.manager}, gérant
+        Directeur de la publication : {site.manager}, gérant
       </>
     ),
   },
@@ -35,9 +37,9 @@ const blocks = [
       <>
         Vercel Inc.
         <br />
-        340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis
+        440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis
         <br />
-        vercel.com
+        Téléphone : +1 559 288 7060 · vercel.com
       </>
     ),
   },
@@ -66,9 +68,12 @@ const blocks = [
     title: "Avis clients",
     body: (
       <>
-        Les avis reproduits sur ce site sont publiés par leurs auteurs sur la
-        fiche Google du restaurant et repris sans modification. La note
-        moyenne affichée est celle constatée sur cette même fiche.
+        Les avis présentés sur ce site sont une sélection d&apos;avis publiés
+        par leurs auteurs sur la fiche Google du restaurant. Ils sont
+        reproduits sans modification, avec leur date de publication, et
+        classés du plus récent au plus ancien. Ils ne font pas l&apos;objet
+        d&apos;une vérification par l&apos;éditeur du site. L&apos;ensemble
+        des avis est consultable sur la fiche Google de l&apos;établissement.
       </>
     ),
   },

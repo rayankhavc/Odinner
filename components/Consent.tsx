@@ -20,7 +20,7 @@
  *   d'où le lien « Cookies » du pied de page.
  *
  * Le refus est mémorisé comme l'acceptation. Redemander à chaque visite à
- * quelqu'un qui a déjà dit non, c'est le harceler jusqu'à ce qu'il cède — et
+ * quelqu'un qui a déjà dit non, c'est le harceler jusqu'à ce qu'il cède, et
  * c'est précisément ce que la CNIL sanctionne.
  */
 

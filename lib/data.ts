@@ -17,7 +17,7 @@
 export const site = {
   name: "O'dinner",
   legalName: "O'DINNER",
-  tagline: "Kebab · Burger · Tacos · Pizza",
+  tagline: "Kebab · Burger · Tacos",
   city: "Mareuil-sur-Lay-Dissais",
   shortCity: "Mareuil-sur-Lay",
   department: "Vendée",
@@ -46,6 +46,13 @@ export const site = {
   siret: "979 527 447 00010",
   ape: "56.10C",
   manager: "Ali Yahiaoui",
+  // Registre du commerce (annuaire-entreprises.data.gouv.fr, verifie le
+  // 29/09/2026) : mentions obligatoires pour une societe (art. 6-III LCEN,
+  // R123-237 du Code de commerce).
+  legalForm: "EURL (SARL à associé unique)",
+  capital: "500 €",
+  rcs: "979 527 447 R.C.S. La Roche-sur-Yon",
+  vat: "FR42979527447",
 
   // Zone de chalandise reelle (maillage SEO local)
   areaServed: [
@@ -500,21 +507,21 @@ export const reviews: Review[] = [
     author: "Rémy A.",
     rating: 5,
     date: "2025-09-06",
-    dateLabel: "Septembre 2025",
+    dateLabel: "6 septembre 2025",
     text: "Meilleur kebab dans les parages. Je me suis régalé avec une viande délicieuse en bonne quantité. Je reviendrai les yeux fermés.",
   },
   {
     author: "Kevin E.",
     rating: 5,
     date: "2025-08-23",
-    dateLabel: "Août 2025",
-    text: "Je viens souvent ici et jamais été déçu ! En plus d'être sympas, ils font du bon job ! Burgers, tacos, kebabs excellent !",
+    dateLabel: "23 août 2025",
+    text: "Je viens souvent ici et jamais été déçu ! En plus d'être sympas, ils font du bon job ! Burgers, tacos, kebabs excellent ! 👌",
   },
   {
     author: "Jérémy I.",
     rating: 5,
     date: "2025-08-24",
-    dateLabel: "Août 2025",
+    dateLabel: "24 août 2025",
     text: "Le double burger est garni comme il faut et le kebab est bon ! Je ne pensais pas trouver ça à 10 minutes de chez moi. Je reviendrai !",
   },
 ];

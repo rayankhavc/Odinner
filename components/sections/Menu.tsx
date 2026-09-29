@@ -17,6 +17,10 @@ export default function Menu() {
               Les burgers, dans notre pain maison. Et si vous hésitez, on vous
               conseille au comptoir.
             </p>
+            <p className="mt-4 text-[0.8125rem] text-ink/60">
+              Prix en euros TTC, service compris. La liste des allergènes est
+              disponible sur demande au restaurant.
+            </p>
           </div>
         </Reveal>
       </div>

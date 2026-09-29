@@ -12,6 +12,10 @@ function Stars({ n = 5, className = "h-3.5 w-3.5" }: { n?: number; className?: s
   );
 }
 
+// Du plus recent au plus ancien : c'est le critere de classement annonce
+// sous les avis (art. L111-7-2 et D111-17 du Code de la consommation).
+const sorted = [...reviews].sort((a, b) => b.date.localeCompare(a.date));
+
 export default function Reviews() {
   return (
     <section id="avis" className="on-paper bg-paper py-20 text-ink sm:py-24">
@@ -37,7 +41,7 @@ export default function Reviews() {
         </Reveal>
 
         <StaggerList className="mt-12 grid gap-4 md:grid-cols-3" gap={0.1}>
-          {reviews.map((r) => (
+          {sorted.map((r) => (
             <RevealListItem
               key={r.author}
               className="flex flex-col rounded-2xl bg-white p-7 shadow-card"
@@ -66,8 +70,11 @@ export default function Reviews() {
             >
               Laisser un avis
             </a>
-            <p className="text-[0.8125rem] text-ink/60">
-              Avis publiés sur notre fiche Google, repris tels quels.
+            <p className="max-w-xl text-[0.8125rem] leading-relaxed text-ink/60">
+              Sélection de trois avis publiés sur notre fiche Google, reproduits
+              sans modification et classés du plus récent au plus ancien. Ils ne
+              font pas l&apos;objet d&apos;une vérification de notre part. Tous
+              les avis, quelle que soit leur note, sont consultables sur Google.
             </p>
           </div>
         </Reveal>

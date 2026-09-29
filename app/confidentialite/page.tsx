@@ -53,7 +53,7 @@ export default function Confidentialite() {
               key={b.title}
               className="grid gap-2 py-7 sm:grid-cols-[13rem_1fr] sm:gap-8"
             >
-              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/40">
+              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/60">
                 {b.title}
               </h2>
               <p className="leading-relaxed text-ink/70">{b.body}</p>

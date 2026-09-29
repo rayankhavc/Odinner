@@ -35,7 +35,7 @@ export default function MapEmbed() {
       <span className="font-display text-lg font-bold tracking-tight text-bone">
         Afficher la carte
       </span>
-      <span className="max-w-xs text-[0.8125rem] leading-relaxed text-bone/45">
+      <span className="max-w-xs text-[0.8125rem] leading-relaxed text-bone/55">
         Google Maps se charge à votre clic. Aucun cookie tiers n&apos;est déposé
         avant.
       </span>

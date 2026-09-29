@@ -39,7 +39,7 @@ export default function Menu() {
                     {category.title}
                   </h3>
                   {category.note ? (
-                    <p className="text-[0.8125rem] text-ink/45">{category.note}</p>
+                    <p className="text-[0.8125rem] text-ink/60">{category.note}</p>
                   ) : null}
                 </div>
 
@@ -58,7 +58,7 @@ export default function Menu() {
                             />
                           ) : null}
                           {item.signature ? (
-                            <span className="ml-2 rounded-full bg-brand px-2 py-0.5 align-middle text-[0.625rem] font-bold uppercase tracking-wider text-white">
+                            <span className="ml-2 rounded-full bg-brand-solid px-2 py-0.5 align-middle text-[0.625rem] font-bold uppercase tracking-wider text-white">
                               La maison
                             </span>
                           ) : null}
@@ -69,7 +69,7 @@ export default function Menu() {
                         </span>
                       </div>
                       {item.description ? (
-                        <p className="mt-1 max-w-md text-sm leading-relaxed text-ink/50">
+                        <p className="mt-1 max-w-md text-sm leading-relaxed text-ink/60">
                           {item.description}
                         </p>
                       ) : null}
@@ -86,7 +86,7 @@ export default function Menu() {
       <div className="wrap grid gap-4 border-t border-paper-line py-12 md:grid-cols-3">
         <Reveal className="rounded-2xl bg-paper-soft p-6">
           <h3 className="h3">Les viandes au choix</h3>
-          <p className="mt-1 text-[0.8125rem] text-ink/45">
+          <p className="mt-1 text-[0.8125rem] text-ink/60">
             Pour les tacos, maxis, assiettes et bowls. Viande en plus {extras[3].price}
           </p>
           <ul className="mt-4 flex flex-wrap gap-1.5">
@@ -103,7 +103,7 @@ export default function Menu() {
 
         <Reveal delay={0.08} className="rounded-2xl bg-paper-soft p-6">
           <h3 className="h3">Les sauces</h3>
-          <p className="mt-1 text-[0.8125rem] text-ink/45">Au choix, sans supplément</p>
+          <p className="mt-1 text-[0.8125rem] text-ink/60">Au choix, sans supplément</p>
           <ul className="mt-4 flex flex-wrap gap-1.5">
             {sauces.map((s) => (
               <li

@@ -91,14 +91,14 @@ export default function MentionsLegales() {
         <div className="mt-12 divide-y divide-paper-line border-y border-paper-line">
           {blocks.map((b) => (
             <section key={b.title} className="grid gap-2 py-7 sm:grid-cols-[13rem_1fr] sm:gap-8">
-              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/40">
+              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/60">
                 {b.title}
               </h2>
               <p className="leading-relaxed text-ink/70">{b.body}</p>
             </section>
           ))}
           <section className="grid gap-2 py-7 sm:grid-cols-[13rem_1fr] sm:gap-8">
-            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/40">
+            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-ink/60">
               Données personnelles
             </h2>
             <p className="leading-relaxed text-ink/70">

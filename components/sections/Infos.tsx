@@ -21,7 +21,7 @@ export default function Infos() {
       <div className="wrap relative">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand">Horaires et accès</p>
+            <p className="eyebrow text-brand-light">Horaires et accès</p>
             <h2 className="h2 mt-5 text-balance text-bone">
               On est là sept jours sur sept.
             </h2>
@@ -70,7 +70,7 @@ export default function Infos() {
                 <dl className="mt-7 grid gap-4 border-t border-char-line pt-6 sm:grid-cols-3">
                   {practical.map((p) => (
                     <div key={p.label}>
-                      <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/35">
+                      <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/50">
                         {p.label}
                       </dt>
                       <dd className="mt-1.5 text-[0.875rem] leading-relaxed text-bone/70">
@@ -97,7 +97,7 @@ export default function Infos() {
           </Reveal>
         </div>
 
-        <p className="mt-10 max-w-3xl text-[0.9375rem] leading-relaxed text-bone/40">
+        <p className="mt-10 max-w-3xl text-[0.9375rem] leading-relaxed text-bone/50">
           On est au cœur du bourg de {site.city}, à quelques minutes de{" "}
           {areaServedDisplay}.
         </p>

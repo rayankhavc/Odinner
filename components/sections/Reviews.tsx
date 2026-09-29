@@ -48,7 +48,7 @@ export default function Reviews() {
               </blockquote>
               <figcaption className="mt-6 border-t border-paper-line pt-4">
                 <span className="block text-[0.9375rem] font-semibold">{r.author}</span>
-                <span className="block text-[0.8125rem] text-ink/40">
+                <span className="block text-[0.8125rem] text-ink/60">
                   Avis Google · {r.dateLabel}
                 </span>
               </figcaption>
@@ -66,7 +66,7 @@ export default function Reviews() {
             >
               Laisser un avis
             </a>
-            <p className="text-[0.8125rem] text-ink/40">
+            <p className="text-[0.8125rem] text-ink/60">
               Avis publiés sur notre fiche Google, repris tels quels.
             </p>
           </div>

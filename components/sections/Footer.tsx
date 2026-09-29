@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/35">
+            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/50">
               Adresse
             </h2>
             <address className="mt-4 not-italic leading-relaxed text-bone/70">
@@ -46,13 +46,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/35">
+            <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-bone/50">
               Horaires
             </h2>
             <p className="mt-4 leading-relaxed text-bone/70">
               {hoursSummary}
               <br />
-              <span className="text-[0.875rem] text-bone/45">{hoursNote}</span>
+              <span className="text-[0.875rem] text-bone/55">{hoursNote}</span>
             </p>
             <a
               href="#infos"
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-char-line pt-7 text-[0.8125rem] text-bone/35 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-char-line pt-7 text-[0.8125rem] text-bone/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {site.name} · {site.address.city} ·
             Viandes halal
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Crédit agence. Lien suivi volontairement (rel sans nofollow) :
             c'est un lien éditorial légitime entre le site livré et son auteur. */}
-        <p className="mt-5 text-[0.8125rem] text-bone/30">
+        <p className="mt-5 text-[0.8125rem] text-bone/50">
           Site conçu et réalisé par{" "}
           <a
             href="https://raythan.fr"

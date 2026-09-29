@@ -27,14 +27,14 @@ export default function HoursTable() {
             >
               {d.day}
               {today ? (
-                <span className="rounded-full bg-brand px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-wider text-white">
+                <span className="rounded-full bg-brand-solid px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-wider text-white">
                   Aujourd&apos;hui
                 </span>
               ) : null}
             </span>
 
             {d.slots.length === 0 ? (
-              <span className="text-bone/35">Fermé</span>
+              <span className="text-bone/50">Fermé</span>
             ) : (
               <span className="flex flex-col items-end gap-0.5 text-right tabular-nums sm:flex-row sm:items-baseline sm:gap-4">
                 {d.slots.map((s) => (

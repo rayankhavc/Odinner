@@ -81,7 +81,7 @@
   }
 
   .btn-brand {
-    @apply btn bg-brand text-white hover:bg-brand-bright;
+    @apply btn bg-brand-solid text-white hover:bg-brand-hover;
   }
 
   .btn-light {

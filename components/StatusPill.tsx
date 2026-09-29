@@ -37,7 +37,7 @@ export default function StatusPill({
     return (
       <span
         className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[0.8125rem] ${
-          tone === "dark" ? "bg-white/5 text-bone/40" : "bg-ink/5 text-ink/40"
+          tone === "dark" ? "bg-white/5 text-bone/50" : "bg-ink/5 text-ink/60"
         } ${className}`}
         aria-hidden="true"
       >
@@ -58,7 +58,7 @@ export default function StatusPill({
             : "bg-white/5 text-bone/55"
           : open
             ? "bg-emerald-600/10 text-emerald-700"
-            : "bg-ink/5 text-ink/55"
+            : "bg-ink/5 text-ink/60"
       } ${className}`}
     >
       <span

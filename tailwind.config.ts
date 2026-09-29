@@ -13,6 +13,13 @@ const config: Config = {
           bright: "#FF2A1F",
           // variante assombrie, seule a passer le contraste AA sur le papier
           ink: "#C20D10",
+          // fond des boutons et pastilles a texte blanc : le rouge du logo ne
+          // donne que 4,3:1 avec du blanc, celui-ci passe l'AA (5,3:1)
+          solid: "#DA0000",
+          // petits textes rouges sur fond sombre (sur-titres) : plus clair
+          // pour rester lisible meme devant les halos rouges du fond
+          light: "#FF4D40",
+          hover: "#C40000",
         },
         ink: "#0B0B0D",
         char: {
@@ -58,6 +65,10 @@ const config: Config = {
           "0%,100%": { transform: "translate3d(0,0,0) scale(1.06)" },
           "50%": { transform: "translate3d(5%,-3%,0) scale(1)" },
         },
+        settle: {
+          from: { transform: "scale(0.95)" },
+          to: { transform: "scale(1)" },
+        },
         nudge: {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(5px)" },
@@ -70,6 +81,7 @@ const config: Config = {
         driftA: "driftA 26s ease-in-out infinite",
         driftB: "driftB 32s ease-in-out infinite",
         nudge: "nudge 2.4s ease-in-out infinite",
+        settle: "settle 0.9s cubic-bezier(0.16,1,0.3,1) both",
       },
     },
   },

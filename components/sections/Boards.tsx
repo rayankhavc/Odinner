@@ -51,7 +51,7 @@ export default function Boards() {
       <div className="wrap">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
-            <p className="eyebrow text-brand">Les panneaux</p>
+            <p className="eyebrow text-brand-light">Les panneaux</p>
             <h2 className="h2 mt-5 text-balance text-bone">
               La carte, comme au comptoir.
             </h2>
@@ -104,7 +104,7 @@ export default function Boards() {
           <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8">
             <p className="text-[0.9375rem] font-semibold text-bone">
               {current.label}
-              <span className="ml-2 font-normal text-bone/40">
+              <span className="ml-2 font-normal text-bone/50">
                 {(index ?? 0) + 1} / {boards.length}
               </span>
             </p>

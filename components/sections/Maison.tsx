@@ -32,7 +32,7 @@ export default function Maison() {
       <div className="wrap relative">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="eyebrow text-brand">La maison</p>
+            <p className="eyebrow text-brand-light">La maison</p>
             <h2 className="h2 mt-5 text-balance text-bone">
               Notre spécialité, et notre vitrine sucrée.
             </h2>
@@ -51,7 +51,7 @@ export default function Maison() {
                 }}
               />
               <div className="relative">
-                <span className="inline-block rounded-full bg-brand px-3 py-1 text-[0.625rem] font-bold uppercase tracking-[0.16em] text-white">
+                <span className="inline-block rounded-full bg-brand-solid px-3 py-1 text-[0.625rem] font-bold uppercase tracking-[0.16em] text-white">
                   La spécialité
                 </span>
                 <h3 className="mt-6 font-display text-[clamp(2.25rem,5vw,3.5rem)] font-extrabold leading-[0.9] tracking-tightest text-bone">

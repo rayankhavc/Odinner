@@ -20,7 +20,7 @@ export default function Faq() {
                   <span className="text-pretty">{item.question}</span>
                   <span
                     aria-hidden="true"
-                    className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-ink/5 text-ink/50 transition-transform duration-200 group-open:rotate-45"
+                    className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-ink/5 text-ink/60 transition-transform duration-200 group-open:rotate-45"
                   >
                     <svg viewBox="0 0 12 12" className="h-2.5 w-2.5">
                       <path

@@ -14,7 +14,7 @@ const ITEMS = [
 export default function Ticker() {
   const loop = [...ITEMS, ...ITEMS];
   return (
-    <div className="select-none overflow-hidden bg-brand py-3">
+    <div className="select-none overflow-hidden bg-brand-solid py-3">
       <div className="flex w-max animate-marquee" aria-hidden="true">
         {loop.map((item, i) => (
           <span

@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useReducedMotionSafe } from "./useReducedMotionSafe";
 
 /**
  * Fond animé des sections sombres : deux halos rouges très diffus qui
@@ -19,7 +20,7 @@ export default function Backdrop({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   const { scrollYProgress } = useScroll({
     target: ref,

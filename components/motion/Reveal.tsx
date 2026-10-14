@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import type { ReactNode } from "react";
+import { useReducedMotionSafe } from "./useReducedMotionSafe";
 
 /**
  * Apparition au défilement.
@@ -22,7 +23,7 @@ export function Reveal({
   y?: number;
   className?: string;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   if (reduced) return <div className={className}>{children}</div>;
 
@@ -52,7 +53,7 @@ export function Stagger({
   gap?: number;
   className?: string;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   if (reduced) return <div className={className}>{children}</div>;
 
@@ -81,7 +82,7 @@ export function RevealItem({
   className?: string;
   y?: number;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   if (reduced) return <div className={className}>{children}</div>;
 
@@ -110,7 +111,7 @@ export function RevealListItem({
   children: ReactNode;
   className?: string;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   if (reduced) return <li className={className}>{children}</li>;
 
@@ -140,7 +141,7 @@ export function StaggerList({
   gap?: number;
   className?: string;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
 
   if (reduced) return <ul className={className}>{children}</ul>;
 

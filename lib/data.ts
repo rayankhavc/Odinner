@@ -90,7 +90,7 @@ export const areaServedDisplay = site.areaServed
   .join(", ");
 
 export const photos = {
-  logo: "/photos/logo.png",
+  logo: "/photos/logo-odinner.png",
   patisseries: "/photos/patisseries-orientales.jpg",
 };
 
@@ -262,7 +262,7 @@ export const menu: MenuCategory[] = [
     id: "bowls",
     title: "Bowls",
     short: "Bowls",
-    note: "Base frites + sauce fromagère + oignons croustillants + cheddar fondu",
+    note: "Faits maison : base frites + sauce fromagère + oignons croustillants + cheddar fondu",
     items: [
       { name: "1 viande", price: "11 €" },
       { name: "2 viandes", price: "13 €" },
@@ -474,7 +474,7 @@ export const supplements = [
   },
   {
     price: "1,50 €",
-    items: ["Boursin", "Feta", "Cheddar fondu", "Raclette", "Rösti", "Jambon de dinde"],
+    items: ["Boursin", "Feta", "Cheddar fondu maison", "Raclette", "Rösti", "Jambon de dinde"],
   },
 ];
 

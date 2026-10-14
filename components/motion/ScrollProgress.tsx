@@ -1,13 +1,14 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useReducedMotionSafe } from "./useReducedMotionSafe";
 
 /**
  * Filet rouge en haut de page qui suit l'avancement de la lecture.
  * La carte est longue : c'est le repère le moins encombrant possible.
  */
 export default function ScrollProgress() {
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotionSafe();
   const { scrollYProgress } = useScroll();
   const width = useSpring(scrollYProgress, {
     stiffness: 140,

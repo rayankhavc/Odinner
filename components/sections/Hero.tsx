@@ -40,8 +40,8 @@ export default function Hero() {
               className="lede mt-7 max-w-xl text-pretty text-bone/65 animate-rise" style={{ animationDelay: "0.12s" }}
             >
               Pain maison, viande hachée fraîche 100&nbsp;% bœuf, sauce
-              fromagère maison. On prépare votre plat quand vous commandez, à
-              manger sur place ou à emporter.
+              fromagère et cheddar fondu maison. On prépare votre plat quand
+              vous commandez, à manger sur place ou à emporter.
             </p>
 
             <div className="mt-8 animate-rise" style={{ animationDelay: "0.18s" }}>

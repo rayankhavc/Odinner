@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
-import { site, openingHoursSchema, faq, menu } from "@/lib/data";
+import { site, photos, openingHoursSchema, faq, menu } from "@/lib/data";
 import Analytics from "@/components/Analytics";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import "./globals.css";
@@ -96,7 +96,7 @@ const restaurantJsonLd = {
   servesCuisine: ["Kebab", "Burger", "Tacos", "Panini", "Street food", "Halal"],
   url: site.url,
   image: `${site.url}/opengraph-image`,
-  logo: `${site.url}/photos/logo.png`,
+  logo: `${site.url}${photos.logo}`,
   telephone: site.phoneE164,
   priceRange: "€",
   currenciesAccepted: "EUR",

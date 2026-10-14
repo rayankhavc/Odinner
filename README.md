@@ -40,7 +40,7 @@ Tout est dans **`lib/data.ts`** :
 | Communes ciblées | `site.areaServed` |
 | FAQ | `faq`, alimente aussi le bloc FAQPage de Google |
 
-Photos dans `public/photos/` : `logo.png` (logo détouré de la fiche Google),
+Photos dans `public/photos/` : `logo-odinner.png` (logo or détouré, fourni par le restaurant),
 `patisseries-orientales.jpg`, et les quatre panneaux `carte-*.jpg`.
 
 ## SEO / GEO

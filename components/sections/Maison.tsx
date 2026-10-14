@@ -19,8 +19,8 @@ const proofs = [
     text: "100 % bœuf dans tous nos burgers, du P'tit Cheese au Double Farmer.",
   },
   {
-    title: "La sauce fromagère maison",
-    text: "C'est elle qui fait nos tacos. Vous la retrouvez aussi dans les bowls.",
+    title: "Sauce fromagère et cheddar fondu",
+    text: "Tous les deux faits maison. La sauce fait nos tacos, et on retrouve les deux dans nos bowls.",
   },
 ];
 

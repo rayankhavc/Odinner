@@ -47,7 +47,8 @@ export function GET() {
 
 > Restauration rapide halal à ${site.address.city} (${site.address.zip}), en Vendée.
 > Kebabs, burgers au pain maison, tacos, paninis, assiettes, bowls, salades et
-> pâtisseries orientales, préparés à la commande. Sur place ou à emporter.
+> pâtisseries orientales, préparés à la commande. Sauce fromagère et cheddar
+> fondu faits maison, bowls faits maison. Sur place ou à emporter.
 
 ## Coordonnées
 

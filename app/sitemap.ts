@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/data";
 
 /**
- * Uniquement des URL canoniques (https, sans www, sans slash final) :
+ * Uniquement des URL canoniques (https, avec www, sans slash final) :
  * toute autre forme est une redirection et n'a rien a faire ici.
  */
 export default function sitemap(): MetadataRoute.Sitemap {

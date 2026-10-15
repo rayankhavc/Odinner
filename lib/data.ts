@@ -27,7 +27,7 @@ export const site = {
   //     metadonnees, canonique, sitemap, robots et donnees structurees suivent.
   //     En attendant, c'est l'URL de production Vercel : la canonique et le
   //     sitemap pointent donc vers un hote qui existe reellement.
-  url: "https://odinner.fr",
+  url: "https://www.odinner.fr",
 
   phoneDisplay: "06 25 86 93 17",
   phoneHref: "tel:+33625869317",

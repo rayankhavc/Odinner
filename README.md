@@ -32,7 +32,7 @@ Tout est dans **`lib/data.ts`** :
 
 | À changer | Clé |
 | --- | --- |
-| Nom de domaine | `site.url`, une seule ligne : SEO, canonique, sitemap, robots, JSON-LD et `llms.txt` suivent. Actuellement `https://odinner.fr` |
+| Nom de domaine | `site.url`, une seule ligne : SEO, canonique, sitemap, robots, JSON-LD et `llms.txt` suivent. Actuellement `https://www.odinner.fr` (odinner.fr redirige vers www dans Vercel) |
 | Téléphone, adresse, GPS | `site.phoneDisplay`, `site.address`, `site.geo` |
 | Horaires | `openingHours`, plusieurs créneaux par jour, `slots: []` = fermé |
 | Carte et prix | `menu` (+ `viandes`, `sauces`, `supplements`, `extras`) |

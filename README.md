@@ -62,16 +62,18 @@ Photos dans `public/photos/` : `logo-odinner.png` (logo or détouré, fourni par
 > `aggregateRating` qu'un site publie sur lui-même et peut retirer l'extrait
 > enrichi correspondant. La fiche Google fait foi.
 
-## À activer à la livraison du domaine
+## Google Analytics et Search Console
 
-Vercel → Settings → Environment Variables, puis redéployer :
+Branchés dans `lib/data.ts` (objet `google`) :
 
-| Variable | Effet |
-| --- | --- |
-| `NEXT_PUBLIC_GA_ID` | branche Google Analytics 4 (`G-XXXXXXXXXX`) |
-| `GOOGLE_SITE_VERIFICATION` | balise de vérification Search Console |
+| Champ | Valeur | Effet |
+| --- | --- | --- |
+| `gaId` | `G-0KP7PC4WH6` | Google Analytics 4, avec bandeau de consentement |
+| `siteVerification` | `2ZrQu6g7…` | balise de validation Search Console (propriété `https://www.odinner.fr/`) |
 
-Tant qu'elles sont absentes, aucun script tiers n'est chargé.
+Les variables Vercel `NEXT_PUBLIC_GA_ID` et `GOOGLE_SITE_VERIFICATION`, si
+elles sont posées, prennent le pas. Vider `gaId` retire tout traceur et le
+bandeau.
 
 ---
 

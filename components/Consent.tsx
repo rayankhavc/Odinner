@@ -3,8 +3,8 @@
 /**
  * Bandeau de consentement à la mesure d'audience.
  *
- * Il ne s'affiche que si la mesure est réellement branchée. Sans
- * NEXT_PUBLIC_GA_ID, aucun traceur n'est chargé (voir Analytics.tsx) : il n'y
+ * Il ne s'affiche que si la mesure est réellement branchée. Sans ID de
+ * mesure (google.gaId, lib/data.ts), aucun traceur n'est chargé (voir Analytics.tsx) : il n'y
  * a alors rien à demander, et un bandeau qui réclame un accord pour un cookie
  * qui n'existe pas est une nuisance, pas une conformité.
  *
@@ -50,15 +50,25 @@ export default function Consent({ actif }: { actif: boolean }) {
     }
     if (reponse !== "oui" && reponse !== "non") setVisible(true);
 
-    // Le lien « Cookies » du pied de page pointe sur #cookies. Il peut changer
-    // de page (on arrive avec l'ancre) ou non (on y est déjà, seul le hash
-    // change) : les deux cas doivent rouvrir le choix.
+    // Le lien « Cookies » du pied de page pointe sur #cookies et doit rouvrir
+    // le choix dans tous les cas : arrivée directe avec l'ancre, simple
+    // changement de hash, ou navigation interne de Next.js (qui ne recharge
+    // pas ce composant et ne déclenche pas « hashchange » : d'où l'écoute
+    // des clics sur les liens).
     const ouvrirSiAncre = () => {
       if (window.location.hash === "#cookies") setVisible(true);
     };
+    const ouvrirSiLienCookies = (e: MouseEvent) => {
+      const lien = (e.target as Element | null)?.closest?.("a");
+      if (lien?.getAttribute("href")?.endsWith("#cookies")) setVisible(true);
+    };
     ouvrirSiAncre();
     window.addEventListener("hashchange", ouvrirSiAncre);
-    return () => window.removeEventListener("hashchange", ouvrirSiAncre);
+    document.addEventListener("click", ouvrirSiLienCookies);
+    return () => {
+      window.removeEventListener("hashchange", ouvrirSiAncre);
+      document.removeEventListener("click", ouvrirSiLienCookies);
+    };
   }, [actif]);
 
   function repondre(valeur: "oui" | "non") {

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
-import { site, photos, openingHoursSchema, faq, menu } from "@/lib/data";
+import { site, photos, google, openingHoursSchema, faq, menu } from "@/lib/data";
 import Analytics from "@/components/Analytics";
 import ScrollProgress from "@/components/motion/ScrollProgress";
 import "./globals.css";
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
     "geo.position": `${site.geo.lat};${site.geo.lng}`,
     ICBM: `${site.geo.lat}, ${site.geo.lng}`,
   },
-  // Renseigne via la variable d'environnement Vercel GOOGLE_SITE_VERIFICATION
-  verification: process.env.GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+  // Balise de validation Search Console (google.siteVerification, lib/data.ts)
+  verification: google.siteVerification
+    ? { google: google.siteVerification }
     : undefined,
 };
 

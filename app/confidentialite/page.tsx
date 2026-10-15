@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/lib/data";
+import { site, google } from "@/lib/data";
 import { ArrowIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 /** La mesure d'audience est-elle réellement branchée ? Voir Analytics.tsx. */
-const GA_ACTIF = Boolean(process.env.NEXT_PUBLIC_GA_ID);
+const GA_ACTIF = Boolean(google.gaId);
 
 const blocks: { id?: string; title: string; body: string }[] = [
   {
@@ -24,10 +24,10 @@ const blocks: { id?: string; title: string; body: string }[] = [
   },
   {
     // Cette page suit la configuration réelle plutôt que de la décrire de
-    // mémoire. Poser NEXT_PUBLIC_GA_ID branche la mesure d'audience : si ce
+    // mémoire. Poser un ID de mesure branche l'audience : si ce
     // texte restait figé sur « aucune mesure d'audience », la page la plus
     // formelle du site deviendrait fausse le jour où quelqu'un pose la
-    // variable, sans que personne s'en aperçoive.
+    // l'ID, sans que personne s'en aperçoive.
     id: "cookies",
     title: "Cookies",
     body: GA_ACTIF

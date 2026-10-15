@@ -1,18 +1,17 @@
 import Script from "next/script";
 import Consent from "@/components/Consent";
+import { google } from "@/lib/data";
 
 /**
  * Google Analytics 4, inerte par défaut.
  *
- * Rien n'est chargé tant que NEXT_PUBLIC_GA_ID n'est pas renseignée : aucun
- * script tiers, aucun cookie de mesure, donc aucun bandeau à afficher.
- * Pour activer : Vercel → Settings → Environment Variables →
- * NEXT_PUBLIC_GA_ID = G-XXXXXXXXXX, puis redéployer.
+ * Rien n'est chargé tant que l'ID de mesure (google.gaId dans lib/data.ts)
+ * est vide : aucun script tiers, aucun cookie de mesure, donc aucun bandeau.
  *
  * ── Ce que poser cette variable entraîne ──────────────────────────────────
  * Google Analytics dépose des cookies de mesure, et la CNIL les soumet au
  * consentement dès lors que l'outil n'est pas configuré en mesure exemptée.
- * Poser NEXT_PUBLIC_GA_ID sans rien d'autre rendrait donc le site non
+ * Poser un ID de mesure sans rien d'autre rendrait donc le site non
  * conforme, et la politique de confidentialité fausse.
  *
  * Ce composant s'occupe des deux conséquences plutôt que de les laisser à
@@ -21,9 +20,9 @@ import Consent from "@/components/Consent";
  * scripts est ce qui fait la conformité : sans le premier, gtag.js écrit son
  * cookie avant que quiconque ait rien demandé.
  *
- * Retirer la variable défait l'ensemble : aucun traceur, aucun bandeau.
+ * Vider l'ID défait l'ensemble : aucun traceur, aucun bandeau.
  */
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_ID = google.gaId;
 
 export default function Analytics() {
   if (!GA_ID) return null;

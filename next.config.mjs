@@ -16,14 +16,17 @@
  */
 const CSP = [
   "default-src 'self'",
-  // googletagmanager : la balise GA4, chargée seulement si NEXT_PUBLIC_GA_ID
-  // est posée, et seulement après consentement (voir components/Analytics.tsx).
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+  // googletagmanager : la balise GA4, chargée seulement si un ID de mesure est
+  // renseigné (google.gaId, lib/data.ts), en mode consentement « refusé » tant
+  // que le visiteur n'a pas accepté (voir components/Analytics.tsx).
+  "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com",
+  "img-src 'self' data: blob: https://*.googletagmanager.com https://*.google-analytics.com",
   // next/font héberge les polices sur notre propre domaine : aucun tiers ici.
   "font-src 'self' data:",
-  "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
+  // GA4 envoie ses mesures vers des serveurs régionaux (region1.google-analytics.com,
+  // *.analytics.google.com) : sans les jokers, les visites seraient bloquées.
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
   // La carte Google Maps, chargée uniquement au clic du visiteur.
   "frame-src https://www.google.com https://maps.google.com",
   "frame-ancestors 'none'",

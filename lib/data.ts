@@ -14,6 +14,21 @@
  * ==============================================================
  */
 
+/**
+ * Comptes Google du restaurant. Ce sont des identifiants publics (ils
+ * apparaissent de toute facon dans le HTML) : ils vivent donc ici, avec le
+ * reste du contenu. Une variable d'environnement Vercel, si elle est posee,
+ * prend le pas.
+ */
+export const google = {
+  /** Google Analytics 4 : ID de mesure du flux www.odinner.fr */
+  gaId: process.env.NEXT_PUBLIC_GA_ID || "G-0KP7PC4WH6",
+  /** Search Console : balise de validation de la propriete https://www.odinner.fr/ */
+  siteVerification:
+    process.env.GOOGLE_SITE_VERIFICATION ||
+    "2ZrQu6g7mANNA-NLUj7a435IRtpHqCnHarkKVhBDm9Q",
+};
+
 export const site = {
   name: "O'dinner",
   legalName: "O'DINNER",

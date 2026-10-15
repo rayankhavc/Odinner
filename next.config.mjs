@@ -40,6 +40,18 @@ const nextConfig = {
   images: { formats: ["image/avif", "image/webp"] },
   compress: true,
   poweredByHeader: false,
+  // L'ancienne adresse Vercel renvoie vers le nom de domaine : une seule
+  // adresse pour Google, pas de contenu en double.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "odinner-site.vercel.app" }],
+        destination: "https://www.odinner.fr/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
